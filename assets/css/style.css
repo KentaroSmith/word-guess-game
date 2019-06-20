@@ -1,7 +1,8 @@
-.frame{
-    height: 540px;
+.card{
+    float: left;
+
 }
 .cardpic{
     max-height: 100%;
-    width:auto;
+    float: left;
 }
