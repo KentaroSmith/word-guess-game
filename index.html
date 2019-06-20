@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="stylesheet/css" href="assets/css/style.css">
-    <link type="javascript" href="assets/javascript/game.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,28 +13,34 @@
 
 <body>
     <div class="container">
+        <div class="row">
 
-        <div class="jumbotron">
-            <h1 class="display-4">Who's that Pokemon!?</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                to featured content or information.</p>
-            <hr class="my-4">
-            <div class="frame"><img src="assets/images/960.540.png" class="cardpic"></div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                Word to guess
+            <div class="jumbotron">
+                <h1 class="display-4">Who's that Pokemon!?</h1>
+                <p class="lead">Press any key to get started! If you can guess the word correctly before
+                    you get 9 letters wrong, you win!</p>
+                <hr class="my-4">
+                <div class="frame"><img src="assets/images/480.270.png" class="cardpic"></div>
+                <div class="card">
+                    <div class="card-header">
+                        Word to guess
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h3><span id="letters"></span>
+                            </h3>
+                        </li>
+                        <li class="list-group-item">Wrong guesses:<span id="wrong_guesses"></span></li>
+                        <li class="list-group-item">Guesses left:<span id="guesses_left"></span></li>
+                        <li class="list-group-item">Wins:<span id="wins"></span></li>
+                        <li class="list-group-item">Losses:<span id="losses"></span></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">_ _ _ _ _ _ _ _</li>
-                <li class="list-group-item">Wrong guesses:</li>
-                <li class="list-group-item">Guesses left:</li>
-                <li class="list-group-item">Wins:</li>
-                <li class="list-group-item">Losses:</li>
-            </ul>
         </div>
 
     </div>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
