@@ -6,6 +6,7 @@ var lettersinword = [];
 var numBlanks = 0;
 var blanksandrightguesses = [];
 var wrongGuesses = [];
+var userinput;
 
 
 var wins = 0;
@@ -41,8 +42,34 @@ function start() {
     console.log(blanksandrightguesses);
 }
 start();
+// The above function sets up all of my global variables and sets the element id's to the variable values
 
-$(document).keyup(function () {
-    var userinput = String.fromCharCode(event).toLowerCase();
+function letterCheck() {
+    var ContainsLetter = false;
+    for (var i = 0; i < numBlanks; i++) {
+        if (lettersinword.indexOf(userinput)) {
+            ContainsLetter = true;
+            console.log(ContainsLetter);
+
+        }
+        else {
+            guesses = guesses - 1;
+            $("#wrong_guesses").append(userinput);
+
+        }
+
+    }
+    if (ContainsLetter) {
+        for (var i = 0; i < numBlanks; i++) {
+            if (lettersinword[i] == userinput) {
+                blanksandrightguesses[i] = userinput;
+            }
+        }
+    }
+}
+
+$(document).on("keyup", function () {
+    userinput = String.fromCharCode(event.keyCode).toLowerCase();
     console.log(userinput);
+    letterCheck();
 });
