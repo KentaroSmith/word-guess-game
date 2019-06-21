@@ -1,19 +1,17 @@
 /// Variables
-///-------------------------------------------------------
 var wordOptions = ["pikachu", "squirtel", "bulbasaur", "charmander", "pidgey"];
 var selectedWord = "";
 var lettersinword = [];
 var numBlanks = 0;
 var blanksandrightguesses = [];
 var wrongGuesses = [];
-var userinput;
+var userinput = [];
 
 
 var wins = 0;
 var losses = 0;
 var guesses = 9;
 /// Functions
-///-------------------------------------------------------
 function start() {
     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
     ///choosing a random word from the list
@@ -73,3 +71,6 @@ $(document).on("keyup", function () {
     console.log(userinput);
     letterCheck();
 });
+// as of right now key up seems to register 10 times in a row, will need to fix.
+// next steps involve verifying user input to match blanksandright guesses to reveal word as you type, as well
+//as displaying win/loss alerts/counter.
